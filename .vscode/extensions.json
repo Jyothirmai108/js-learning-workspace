@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "ritwickdey.liveserver",
+    "ms-vscode.vscode-eslint",
+    "formulahendry.auto-rename-tag",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-json",
+    "ms-vscode-remote.remote-repositories",
+    "github.copilot",
+    "ms-vscode.hexeditor",
+    "ms-vscode.references-view",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.live-server"
+  ]
+}

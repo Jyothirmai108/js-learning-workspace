@@ -1,0 +1,82 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Create New Project",
+      "type": "shell",
+      "command": "./create-project.sh",
+      "args": [
+        "${input:category}",
+        "${input:projectName}",
+        "${input:projectTitle}",
+        "${input:description}"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Format Current Project",
+      "type": "shell",
+      "command": "prettier",
+      "args": [
+        "--write",
+        "${workspaceFolder}/${input:projectPath}/**/*.{html,js,css,md}"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Format All Files",
+      "type": "shell",
+      "command": "prettier",
+      "args": ["--write", "**/*.{js,html,css,md,json}"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "category",
+      "description": "Category folder (e.g., 01-fundamentals)",
+      "type": "promptString",
+      "default": "01-fundamentals"
+    },
+    {
+      "id": "projectName",
+      "description": "Project folder name (e.g., project-01-variables)",
+      "type": "promptString"
+    },
+    {
+      "id": "projectTitle",
+      "description": "Project title (e.g., Variables and Constants)",
+      "type": "promptString"
+    },
+    {
+      "id": "description",
+      "description": "Project description",
+      "type": "promptString"
+    },
+    {
+      "id": "projectPath",
+      "description": "Project path to format (e.g., 01-fundamentals/project-01-variables)",
+      "type": "promptString"
+    }
+  ]
+}

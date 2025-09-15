@@ -1,0 +1,16 @@
+# Ignore generated files
+node_modules/
+dist/
+build/
+coverage/
+
+# Ignore specific files
+*.min.js
+*.min.css
+
+# Ignore documentation that should maintain specific formatting
+CHANGELOG.md
+LICENSE
+
+# Ignore certain folders if needed
+templates/legacy/

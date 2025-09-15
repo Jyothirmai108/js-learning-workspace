@@ -1,0 +1,27 @@
+{
+  "name": "js-learning-workspace",
+  "version": "1.0.0",
+  "description": "JavaScript learning workspace with organized projects",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,html,css,md,json}\"",
+    "format:check": "prettier --check \"**/*.{js,html,css,md,json}\"",
+    "format:project": "prettier --write",
+    "create:project": "./create-project.sh"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "keywords": [
+    "javascript",
+    "learning",
+    "education",
+    "projects"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "type": "commonjs"
+}
